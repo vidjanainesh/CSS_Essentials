@@ -1,0 +1,52 @@
+/* CSS for Assignment 4 */
+
+/* Global Styles */
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Container layout for images */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Individual image sections */
+.image-section {
+    width: 80%;
+    max-width: 800px;
+    height: 200px;
+}
+
+/* Base styling for all image boxes */
+.image-box {
+    width: 100%;
+    height: 160px;
+    border: 1px solid black;
+    background-image: url('./Assignment_Images/Assignment4.PNG');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Image 1 - Align background to the top */
+.img1 {
+    background-position: top;
+}
+
+/* Image 2 - Align background to the bottom */
+.img2 {
+    background-position: bottom;
+}
+
+/* Image 3 - Centered and larger size */
+.img3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 300px;
+    background-position: center;
+    margin: auto;
+}

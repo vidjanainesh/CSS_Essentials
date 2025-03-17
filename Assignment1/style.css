@@ -1,59 +1,66 @@
+/* Reset default margin and padding for all elements */
 * {
-    margin: 0;
-    padding: 0;
-  }
-  
+  margin: 0;
+  padding: 0;
+}
+
+/* Set full height, font style, background, and text color */
 html, body {
-    height: 100%;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    background-color: yellow; 
-    color: purple;        
+  height: 100%;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background-color: yellow; 
+  color: purple;        
 }
 
+/* Flexbox row container with spacing */
 .row {
-  margin-top: 20px;
-  display: flex;
-  flex-direction: row;
-  gap: 30px;
+margin-top: 20px;
+display: flex;
+flex-direction: row;
+gap: 30px;
 }
 
+/* Column-based flex container with spacing */
+.threerows {
+margin: 20px 0 50px 0;
+display: flex;
+flex-direction: column;
+gap: 15px;
+}
+
+/* Styling for list items */
 ul li {
-  position: relative;
-  border: 0px;
-  margin: 10px 10px 10px 10px;
-  padding: 2px 2px 2px 2px;
-  width: 14vw;
-  height: 22px;
-  background-color: white;
-  display: flex;
-  align-items: center;
+position: relative;
+border: 0px;
+margin: 10px;
+padding: 2px;
+width: 14vw;
+height: 22px;
+background-color: white;
+display: flex;
+align-items: center;
 }
 
+/* Styling for the span inside list items */
 ul li span {
-  position: absolute;
-  right: 0; 
-  top: 0;
-  width: 16px; 
-  height: 100%; 
-  background-color: #000;
+position: absolute;
+right: 0; 
+top: 0;
+width: 16px; 
+height: 100%; 
+background-color: #000;
 }
 
-/* Main */
+/* Dotted horizontal line fixed at the bottom */
 hr {
-  border-style: dotted;
-  width: 100%;
-  position: fixed;
-  margin-bottom: 40px;
+border-style: dotted;
+width: 100%;
+position: fixed;
+margin-bottom: 40px;
 }
 
-.threerows{
-  margin: 20px 0 50px 0;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
+/* Italic text inside paragraphs with top padding */
 p i {
-    padding-top: 20px;
-    display: block;
+  padding-top: 20px;
+  display: block;
 }

@@ -1,15 +1,18 @@
+/* Reset default margin and padding for all elements */
 * {
-    margin: 0;
-    padding: 0;
-  }
-  
-html, body {
-    height: 100%;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    background-color: yellow; 
-    color: #000;        
+  margin: 0;
+  padding: 0;
 }
 
+/* Set full height, font style, background, and text color */
+html, body {
+  height: 100%;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background-color: yellow; 
+  color: #000;        
+}
+
+/* Flexbox row container for layout */
 .row {
   margin-top: 20px;
   display: flex;
@@ -17,11 +20,12 @@ html, body {
   gap: 30px;
 }
 
+/* Sidebar list item styling */
 ul li {
   position: relative;
   border: 0px;
-  margin: 10px 10px 10px 10px;
-  padding: 2px 2px 2px 2px;
+  margin: 10px;
+  padding: 2px;
   width: 14vw;
   height: 30px;
   background-color: white;
@@ -29,6 +33,7 @@ ul li {
   align-items: center;
 }
 
+/* Colored indicators inside list items */
 ul li span {
   position: absolute;
   right: 0; 
@@ -37,39 +42,45 @@ ul li span {
   height: 100%; 
 }
 
+/* Define specific colors for span elements */
 .orange { background-color: #FF7F00; }
 .blue { background-color: #0000FF; }
 
-/* Main */
+/* Dotted horizontal line fixed at the bottom */
 hr {
   border-style: dotted;
   width: 100%;
   position: fixed;
 }
 
-.threerows{
+/* Column-based flex container with spacing */
+.threerows {
   margin: 20px 0 40px 0;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-.purpletext{
+/* Text color styling for main content */
+.purpletext {
   color: purple;
 }
 
-.boxes{
+/* Lighter font weight for box container */
+.boxes {
   font-weight: lighter;
 }
 
-.box1{
+/* Box styles with different borders and alignments */
+.box1 {
   border: dashed 2px black;
   padding: 10px 10px 10px 5px;
   margin-top: 30px;
   margin-bottom: 15px;
   color: black;
 }
-.box2{
+
+.box2 {
   border: dashed 2px #FF7F00;
   padding: 10px 10px 10px 5px;
   margin-bottom: 15px;
@@ -77,7 +88,8 @@ hr {
   font-style: italic;
   color: black;
 }
-.box3{
+
+.box3 {
   border: dotted 1px #0000FF;
   padding: 10px 10px 10px 5px;
   margin-bottom: 15px;
@@ -85,7 +97,8 @@ hr {
   color: black;
 }
 
+/* Hover effect for all boxes */
 .box1:hover, .box2:hover, .box3:hover {
   transform: translateY(-10px); /* Moves the box up */
-  /* transition: transform 0.3s ease-in-out; */
+  transition: transform 0.3s ease-in-out;
 }

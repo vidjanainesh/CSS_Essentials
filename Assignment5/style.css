@@ -1,0 +1,521 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    scroll-behavior: smooth; /* Enable smooth scrolling for the entire page */
+}
+
+body {
+    background-color: #f0f8ff;
+    overflow-x: hidden;
+}
+
+/* Navigation Styles */
+nav {
+    background-color: #1c1f26;
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.5rem;
+    margin-right: 1.5rem;
+    animation: fadeIn 1s ease-in;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.2s ease;
+    animation: slideInTop 0.5s ease forwards;
+    padding: 8px 12px;
+    border-radius: 15px;
+}
+
+.nav-links a:hover {
+    background-color: white;
+    color: black;
+    transition: 0.5s;
+}
+
+/* Icon Menu Styles */
+.icon-menu {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0;
+    gap: 1rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.icon-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    width: 150px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    background-color: white;
+}
+
+.icon-item h3 {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.icon-item p {
+    font-size: 0.8rem;
+    text-align: center;
+    color: #666;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+/* Icon specific colors */
+.icon-music .icon {
+    border: 1px solid #ff69b4;
+    color: #ff69b4;
+}
+
+.icon-downloads .icon {
+    border: 1px solid #4CAF50;
+    color: #4CAF50;
+}
+
+.icon-pictures .icon {
+    border: 1px solid #FFC107;
+    color: #FFC107;
+}
+
+.icon-connect .icon {
+    border: 1px solid #2196F3;
+    color: #2196F3;
+}
+
+.icon-location .icon {
+    border: 1px solid #607D8B;
+    color: #607D8B;
+}
+
+/* Hover effects for icon items */
+.icon-music:hover {
+    background-color: #fff0f5; /* Light pink background on hover */
+}
+.icon-music:hover .icon {
+    background-color: #ff69b4; /* Pink background for icon */
+    color: white;
+    transform: rotate(360deg);
+    transition: 1s;
+}
+
+.icon-pictures:hover {
+    background-color: #fffde7; /* Light yellow background on hover */
+}
+.icon-pictures:hover .icon {
+    background-color: #FFC107; /* Yellow background for icon */
+    color: white;
+    transform: rotate(360deg);
+    transition: 1s;
+}
+
+.icon-downloads:hover {
+    background-color: #e8f5e9; /* Light green background on hover */
+}
+.icon-downloads:hover .icon {
+    background-color: #4CAF50;
+    color: white;
+    transform: rotate(360deg);
+    transition: 1s;
+}
+
+.icon-connect:hover {
+    background-color: #e3f2fd; /* Light blue background on hover */
+}
+.icon-connect:hover .icon {
+    background-color: #2196F3;
+    color: white;
+    transform: rotate(360deg);
+    transition: 1s;
+}
+
+.icon-location:hover {
+    background-color: #eceff1; /* Light gray background on hover */
+}
+.icon-location:hover .icon {
+    background-color: #607D8B;
+    color: white;
+    transform: rotate(360deg);
+    transition: 1s;
+}
+
+/* Hero Section Styles */
+.hero {
+    display: flex;
+    padding: 3rem 2rem;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 80vh;
+}
+
+.hero-content {
+    flex: 1;
+    animation: slideInLeft 1s ease forwards;
+}
+
+.hero-image {
+    flex: 1;
+    max-width: 600px;
+    animation: slideInRight 1s ease forwards;
+    opacity: 0;
+    transition: transform 0.3s ease;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.hero-image img:hover {
+    transform: scale(1.02);
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background-color: #2196f3;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    animation: pulse 2s infinite;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn:hover {
+    background-color: #0d8aee;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(33, 150, 243, 0.4);
+}
+
+/* Green "Learn More" button for the secondary section */
+.green-btn {
+    background-color: #4CAF50;
+    margin-top: 1.5rem;
+}
+
+.green-btn:hover {
+    background-color: #388E3C;
+    box-shadow: 0 5px 15px rgba(76, 175, 80, 0.4);
+}
+
+/* Pulse animation for green button */
+.green-btn {
+    animation: pulseGreen 2s infinite;
+}
+
+@keyframes pulseGreen {
+    0% {
+        box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(76, 175, 80, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(76, 175, 80, 0);
+    }
+}
+
+/* Add ripple effect on button */
+.btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: width 0.6s ease, height 0.6s ease, opacity 0.6s ease;
+}
+
+.btn:hover::after {
+    width: 300px;
+    height: 300px;
+    opacity: 1;
+}
+
+/* Secondary Section */
+.secondary-section {
+    background-color: #a7f0c3;
+    padding: 3rem 2rem;
+    animation: fadeIn 1.5s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.secondary-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 50%);
+    transform: translateY(-100%);
+}
+
+.secondary-content {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 2rem;
+    align-items: center;
+    position: relative;
+}
+
+.secondary-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.secondary-image img:hover {
+    transform: scale(1.02);
+}
+
+.secondary-text {
+    flex: 1;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 2rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1;
+}
+
+.footer-section h3 {
+    margin-bottom: 1rem;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: white;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInTop {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(33, 150, 243, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(33, 150, 243, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(33, 150, 243, 0);
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        padding: 2rem 1rem;
+    }
+
+    .hero-content, .hero-image {
+        flex: none;
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .secondary-content {
+        flex-direction: column-reverse;
+    }
+
+    .secondary-image, .secondary-text {
+        flex: none;
+        width: 100%;
+    }
+
+    nav {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .logo {
+        margin-bottom: 1rem;
+    }
+
+    .nav-links {
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .icon-menu {
+        flex-wrap: wrap;
+        padding: 2rem 1rem;
+    }
+    
+    .icon-item {
+        width: 120px;
+    }
+    
+    .footer-content {
+        flex-wrap: wrap;
+    }
+    
+    .footer-section {
+        flex: 0 0 50%;
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* Add some CSS-only interactivity */
+/* Fade-in animation for sections when they become visible */
+@keyframes fadeInOnScroll {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.secondary-section {
+    opacity: 0;
+    animation: fadeInOnScroll 1s ease forwards;
+    animation-play-state: paused;
+}
+
+/* Trigger animation when element becomes visible */
+.secondary-section:target {
+    animation-play-state: running;
+}
+
+/* For browsers that don't support :target well for animations,
+   we'll use this as a fallback - it will animate after a delay */
+.secondary-section {
+    animation-delay: 0.5s;
+    animation-play-state: running;
+}
